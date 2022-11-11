@@ -1,0 +1,211 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 250ms $cubic-bezier, visibility 250ms $cubic-bezier;
+}
+
+.backdrop--is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: calc(100% - 30px);
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms $cubic-bezier;
+}
+
+.modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $color-white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: transform 250ms $cubic-bezier, color 250ms $cubic-bezier;
+
+  &-icon {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $color-blue;
+  }
+}
+
+.form__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.form__label {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  text-align: start;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+
+.form__block {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  font-size: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms $cubic-bezier;
+
+  &:focus {
+    border: 1px solid $color-blue;
+  }
+
+  &:focus + .form__icon {
+    fill: $color-blue;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: fill 250ms $cubic-bezier;
+}
+
+.form__textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: initial;
+  transition: border 250ms $cubic-bezier;
+
+  &:focus {
+    border: 1px solid $color-blue;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form__agree {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}
+
+.form__link {
+  margin-left: 5px;
+  color: $color-blue;
+  text-decoration: underline;
+}
+
+.check-icon {
+  display: inline-block;
+  margin-right: 8px;
+  border: 2px solid $text-color;
+  border-radius: 2px;
+  transition: border 250ms $cubic-bezier, backgroun-color 250ms $cubic-bezier;
+}
+
+.check-icon__mark {
+  opacity: 0;
+  transition: opacity 250ms $cubic-bezier;
+}
+
+.agree-checkbox:checked {
+  & ~ .check-icon {
+    border-color: $color-blue;
+    background-color: $color-blue;
+  }
+
+  & ~ .check-icon > .check-icon__mark {
+    opacity: 1;
+  }
+}
+
+.agree-checkbox:focus ~ .check-icon {
+  outline: 1px solid $color-blue;
+}
+
+.form__btn {
+  display: block;
+  padding: 10px 52px;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $color-white;
+  background-color: $color-blue;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background-color: $buton-active-color;
+  }
+}
