@@ -126,6 +126,19 @@
   letter-spacing: 0.03em;
 }
 
+.team-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.team__item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+}
 .team__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -169,6 +182,10 @@
 
 .client__item {
   width: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .client__link {
