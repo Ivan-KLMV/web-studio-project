@@ -5,7 +5,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 2;
+  z-index: 3;
   padding: 0;
   margin: 0;
   background-color: transparent;
@@ -39,11 +39,16 @@
 }
 
 .menu-container {
-  @media screen and (max-width: 768px) {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+
+  @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
     width: 100%;
     padding: 48px 40px;
     font-weight: 500;
@@ -51,6 +56,8 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
     background-color: $color-white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
   }
 
   &.is-open {
@@ -59,11 +66,16 @@
 }
 
 .nav {
-  margin-bottom: 306px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 306px;
+  }
 }
 
 .nav__link {
-  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
 
   &--current {
     color: $color-blue;
@@ -76,46 +88,44 @@
 }
 
 .contact {
-  position: relative;
-  &__icon {
-    display: none;
-  }
+  @media screen and (max-width: 767px) {
+    position: relative;
 
-  &__mail {
-    margin-bottom: 64px;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
+    &__icon {
+      display: none;
+    }
 
-    color: #757575;
-  }
+    &__mail {
+      margin-bottom: 64px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
 
-  &__tel {
-    position: absolute;
-    bottom: 124px;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
-    /* identical to box height */
+      color: #757575;
+    }
 
-    letter-spacing: 0.02em;
+    &__tel {
+      position: absolute;
+      bottom: 124px;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      /* identical to box height */
 
-    color: #2196f3;
+      letter-spacing: 0.02em;
+
+      color: #2196f3;
+    }
   }
 }
 
 .mobile-social {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
-  /* identical to box height, or 122% */
-
+  line-height: 1.22;
   letter-spacing: 0.02em;
-
-  color: #2196f3;
+  color: $color-blue;
 
   &__list {
     display: inline-flex;
@@ -131,5 +141,9 @@
       padding-left: 10px;
       border-left: 1px solid rgba(33, 33, 33, 0.2);
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }

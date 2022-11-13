@@ -1,7 +1,7 @@
 @import "./utils/variables";
 @import "./utils/normalize";
 @import "./components/logo";
-// @import "./components/header";
+@import "./components/header";
 // @import "./components/hero";
 @import "./components/modal";
 @import "./components/social-icons";
@@ -16,8 +16,10 @@
 .header {
   border-bottom: 1px solid #ececec;
   &__container {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    @media screen and (max-width: 767px) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
 }
 
@@ -86,6 +88,17 @@
   }
 }
 
+.advantages__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.advantages__item {
+  flex-basis: calc((100% - 30px) / 2);
+}
 .advantages__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -216,8 +229,15 @@
   text-align: center;
 }
 
-.block {
+.mobile-block {
   margin-bottom: 60px;
+}
+
+.tablet-block {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .address__link {
@@ -259,8 +279,17 @@
   color: $color-white;
 }
 
+.subscription__block {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .subscription__field {
   width: 100%;
+  max-width: 450px;
   height: 50px;
   padding: 15px 16px;
   margin-bottom: 20px;
