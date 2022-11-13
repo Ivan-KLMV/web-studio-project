@@ -48,12 +48,16 @@
     transform: translate(-50%, -50%) scale(1);
     width: 450px;
   }
-  // @media screen and (min-width: 768px) {
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%) scale(1);
-  //   // width: 450px;
-  // }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    // @media screen and (min-width: 768px) {
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%) scale(1);
+    //   // width: 450px;
+    // }
+  }
 }
 
 .modal__close {
@@ -70,6 +74,7 @@
   background-color: $color-white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transition: transform 250ms $cubic-bezier, color 250ms $cubic-bezier;
 
   &-icon {
@@ -172,6 +177,11 @@
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__link {
