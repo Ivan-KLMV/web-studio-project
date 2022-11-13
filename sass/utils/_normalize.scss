@@ -5,6 +5,10 @@ body {
   font-family: Roboto, sans-serif;
   background-color: $color-white;
   color: $text-color;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -30,7 +34,7 @@ ul {
 }
 
 a {
-  display: block;
+  display: inline-block;
   color: inherit;
   text-decoration: none;
   font-style: normal;
