@@ -1,14 +1,17 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css");
 
 body {
-  background-color: $color-white;
+  background-color: $body-background;
   font-family: Roboto, sans-serif;
-  background-color: $color-white;
   color: $text-color;
 
   &.modal-open {
     overflow: hidden;
   }
+}
+
+main {
+  background-color: $color-white;
 }
 
 h1,
@@ -25,6 +28,7 @@ p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 ul {
