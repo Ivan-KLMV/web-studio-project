@@ -587,8 +587,8 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .projects {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -599,6 +599,10 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.projects__item:nth-child(odd) {
+  justify-self: self-end;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
