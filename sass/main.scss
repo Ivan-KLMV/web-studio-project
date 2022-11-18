@@ -378,6 +378,7 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -420,8 +421,9 @@
 }
 
 .join {
+  font-weight: 700;
   font-size: 14px;
-  line-height: 1.17;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $color-white;
@@ -433,7 +435,7 @@
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 

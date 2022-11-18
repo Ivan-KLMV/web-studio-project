@@ -163,41 +163,46 @@
           <ul class="example">
             <li>
               <div class="example__block">
-                <img
-                  srcset="
-                    ./images/img1-370.jpg 370w,
-                    ./images/img1-740.jpg 740w
-                  "
-                  sizes="(min-width: 1200px) 370px"
-                  src="./images/img1-370.jpg"
-                  alt="Людина працює за комп'ютером"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img1-370.jpg 1x, ./images/img1-740.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img1-370.jpg"
+                    alt="Людина працює с телефоном"
+                  />
+                </picture>
                 <p class="example__text">Десктопні додатки</p>
               </div>
             </li>
             <li>
               <div class="example__block">
-                <img
-                  srcset="./images/img2-370.jpg 370w, ./images/img2-740.jpg 740"
-                  sizes="(min-width: 1200px) 370px"
-                  src="./images/img2-370.jpg"
-                  alt="Людина працює с телефоном"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img2-370.jpg 1x, ./images/img2-740.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img2-370.jpg"
+                    alt="Людина працює с телефоном"
+                  />
+                </picture>
                 <p class="example__text">Мобільні додатки</p>
               </div>
             </li>
             <li>
               <div class="example__block">
-                <img
-                  srcset="
-                    ./images/img3-370.jpg 370w,
-                    ./images/img3-740.jpg 740w
-                  "
-                  src="./images/img3-370.jpg"
-                  sizes="(min-width: 1200px) 370px"
-                  alt="Людина працює з планшетом"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img3-370.jpg 1x, ./images/img3-740.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img3-370.jpg"
+                    alt="Людина працює з планшетом"
+                  />
+                </picture>
                 <p class="example__text">Дизайнерські рішення</p>
               </div>
             </li>
@@ -210,20 +215,25 @@
           <ul class="team-list">
             <li class="team__item">
               <div class="person">
-                <img
-                  srcset="
-                    ./images/img4-270.jpg 270w,
-                    ./images/img4-354.jpg 354w,
-                    ./images/img4-450.jpg 450w,
-                    ./images/img4-540.jpg 540w,
-                    ./images/img4-708.jpg 708w,
-                    ./images/img4-900.jpg 900w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
-                  src="./images/img4-270.jpg"
-                  alt="Молодий чоловік в окулярах та в
-                коричневій сорочці"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img4-450.jpg 1x, ./images/img4-900.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/img4-354.jpg 1x, ./images/img4-708.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/img4-270.jpg 1x, ./images/img4-540.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img4-270.jpg"
+                    alt="Молодий чоловік в окулярах та
+                  в коричневій сорочці"
+                  />
+                </picture>
                 <div class="person__pocket">
                   <h3 class="person__name">Ігор Дем'яненко</h3>
                   <p class="person__text">Product Designer</p>
@@ -282,19 +292,24 @@
             </li>
             <li class="team__item">
               <div class="person">
-                <img
-                  srcset="
-                    ./images/img5-270.jpg 270w,
-                    ./images/img5-354.jpg 354w,
-                    ./images/img5-450.jpg 450w,
-                    ./images/img5-540.jpg 540w,
-                    ./images/img5-708.jpg 708w,
-                    ./images/img5-900.jpg 900w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
-                  src="./images/img5-270.jpg"
-                  alt="Молода дівчина у діловому костюмі та в окулярах"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img5-450.jpg 1x, ./images/img5-900.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/img5-354.jpg 1x, ./images/img5-708.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/img5-270.jpg 1x, ./images/img5-540.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img5-270.jpg"
+                    alt="Молода дівчина у діловому костюмі та в окулярах"
+                  />
+                </picture>
                 <div class="person__pocket">
                   <h3 class="person__name">Ольга Рєпіна</h3>
                   <p class="person__text">Frontend Developer</p>
@@ -353,19 +368,24 @@
             </li>
             <li class="team__item">
               <div class="person">
-                <img
-                  srcset="
-                    ./images/img6-270.jpg 270w,
-                    ./images/img6-354.jpg 354w,
-                    ./images/img6-450.jpg 450w,
-                    ./images/img6-540.jpg 540w,
-                    ./images/img6-708.jpg 708w,
-                    ./images/img6-900.jpg 900w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
-                  src="./images/img6-270.jpg"
-                  alt="Молодий чоловік у блакитній сорочці"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img6-450.jpg 1x, ./images/img6-900.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/img6-354.jpg 1x, ./images/img6-708.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/img6-270.jpg 1x, ./images/img6-540.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img6-270.jpg"
+                    alt="Молодий чоловік у блакитній сорочці"
+                  />
+                </picture>
                 <div class="person__pocket">
                   <h3 class="person__name">Микола Тарасов</h3>
                   <p class="person__text">Marketing</p>
@@ -424,19 +444,24 @@
             </li>
             <li class="team__item">
               <div class="person">
-                <img
-                  srcset="
-                    ./images/img7-270.jpg 270w,
-                    ./images/img7-354.jpg 354w,
-                    ./images/img7-450.jpg 450w,
-                    ./images/img7-540.jpg 540w,
-                    ./images/img7-708.jpg 708w,
-                    ./images/img7-900.jpg 900w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
-                  src="./images/img7-270.jpg"
-                  alt="Молодий чоловік у чорній футболці"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img7-450.jpg 1x, ./images/img7-900.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="./images/img7-354.jpg 1x, ./images/img7-708.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/img7-270.jpg 1x, ./images/img7-540.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/img7-270.jpg"
+                    alt="Молодий чоловік у чорній футболці"
+                  />
+                </picture>
                 <div class="person__pocket">
                   <h3 class="person__name">Михайло Єрмаков</h3>
                   <p class="person__text">UI Designer</p>
