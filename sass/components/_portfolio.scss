@@ -22,6 +22,7 @@
   border: none;
   box-shadow: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transition: bacground-color 250ms $cubic-bezier,
     box-shadow 250ms $cubic-bezier;
 
@@ -57,6 +58,21 @@
   }
 }
 
+.projects__item:first-child {
+  // display: flex;
+  // flex-direction: column;
+
+  .projects__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // flex-grow: 2;
+
+    .projects__pocket {
+      flex-grow: 1;
+    }
+  }
+}
 .projects__item:nth-child(odd) {
   justify-self: self-end;
 }
