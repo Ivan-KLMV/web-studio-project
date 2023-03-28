@@ -27,7 +27,8 @@
     box-shadow 250ms $cubic-bezier;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &--is_active {
     color: $color-white;
     background-color: $color-blue;
     box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
@@ -54,7 +55,7 @@
 
   @media screen and (min-width: 1200px) {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 

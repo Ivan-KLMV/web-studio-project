@@ -105,25 +105,39 @@
           <div>
             <ul class="filter">
               <li>
-                <button type="button" class="filter__btn">Усі</button>
+                <button type="button" class="filter__btn filter__btn--is_active" data-filter="all">
+                  Усі
+                </button>
               </li>
               <li>
-                <button type="button" class="filter__btn">Веб сайти</button>
+                <button type="button" class="filter__btn" data-filter="web">
+                  Веб-сайти
+                </button>
               </li>
               <li>
-                <button type="button" class="filter__btn">Додатки</button>
+                <button type="button" class="filter__btn" data-filter="app">
+                  Додатки
+                </button>
               </li>
               <li>
-                <button type="button" class="filter__btn">Дизайн</button>
+                <button type="button" class="filter__btn" data-filter="design">
+                  Дизайн
+                </button>
               </li>
               <li>
-                <button type="button" class="filter__btn">Маркетинг</button>
+                <button
+                  type="button"
+                  class="filter__btn"
+                  data-filter="marketing"
+                >
+                  Маркетинг
+                </button>
               </li>
             </ul>
           </div>
           <div>
             <ul class="projects">
-              <li class="projects__item">
+              <li class="projects__item" data-item="web">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -164,7 +178,7 @@
                   </div></a
                 >
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="design">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -207,7 +221,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="app"
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -251,7 +265,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="marketing">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -292,7 +306,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="app">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -333,7 +347,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="web">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -374,7 +388,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="design">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -412,7 +426,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="marketing">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -450,7 +464,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item">
+              <li class="projects__item" data-item="app">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -607,6 +621,7 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/menu.js" type="module"></script>
+    <script src="./js/filter.js" type="module"></script>
   </body>
 </html>

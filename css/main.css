@@ -107,7 +107,7 @@ a {
 }
 @media screen and (max-width: 1199px) {
   .header__container,
-.nav {
+  .nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -115,7 +115,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .header__container,
-.nav {
+  .nav {
     gap: 93px;
   }
 }
@@ -554,7 +554,7 @@ a {
   transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter__btn:hover, .filter__btn:focus {
+.filter__btn:hover, .filter__btn:focus, .filter__btn--is_active {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1215686275), 0px 1px 2px 0px rgba(0, 0, 0, 0.0784313725), 0px 3px 1px 0px rgba(0, 0, 0, 0.1019607843);
@@ -588,9 +588,9 @@ a {
   .projects {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
