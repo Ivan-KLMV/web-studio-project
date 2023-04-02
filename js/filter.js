@@ -13,25 +13,39 @@ function cardsFilter(evt) {
 
   if (filterItem === 'all') {
     removeActivClass();
-    evt.target.classList.add('filter__btn--is_active');
+    addActiveClass(evt);
     return makeClearFilter();
   }
   removeActivClass();
-  evt.target.classList.add('filter__btn--is_active');
+  addActiveClass(evt);
   makeClearFilter();
-  [...cards]
-    .filter((card) => card.dataset.item !== filterItem)
-    .map((card) => {
-      card.setAttribute('hidden', true);
-    });
+  makeFilter(cards, filterItem);
 }
 
 function makeClearFilter() {
-  [...cards].map((card) => card.removeAttribute('hidden'));
+  [...cards].map(
+    (card) => {
+      card.style.display = 'block';
+    }
+    // card.removeAttribute('hidden')
+  );
+}
+
+function makeFilter(cards, filter) {
+  [...cards]
+    .filter((card) => card.dataset.item !== filter)
+    .map((card) => {
+      card.style.display = 'none';
+      // card.setAttribute('hidden', true);
+    });
 }
 
 function removeActivClass() {
   [...filterBtnArr].map((btn) => {
     btn.classList.remove('filter__btn--is_active');
   });
+}
+
+function addActiveClass(evt) {
+  evt.target.classList.add('filter__btn--is_active');
 }
