@@ -622,9 +622,6 @@ a {
     justify-self: self-end;
   }
 }
-.projects__item {
-  outline: 1px solid palevioletred;
-}
 @media screen and (min-width: 768px) {
   .projects__item {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
