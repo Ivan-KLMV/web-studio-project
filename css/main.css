@@ -565,7 +565,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  row-gap: 30px;
   gap: 30px;
 }
 @media screen and (max-width: 767px) {
@@ -715,6 +714,12 @@ a {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+@media screen and (max-width: 767px) {
+  .hide {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
 
 @-webkit-keyframes hideBlocks {
   0% {
@@ -724,6 +729,11 @@ a {
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 60px) / 3);
     }
+  }
+  80% {
+    flex-basis: 0;
+    width: 0;
+    scale: 0;
   }
   100% {
     opacity: 0;
@@ -744,6 +754,12 @@ a {
       -ms-flex-preferred-size: calc((100% - 60px) / 3);
           flex-basis: calc((100% - 60px) / 3);
     }
+  }
+  80% {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    width: 0;
+    scale: 0;
   }
   100% {
     opacity: 0;
