@@ -29,7 +29,7 @@ function cardsFilter(evt) {
 // }
 
 function makeClearFilter() {
-  listOfCards.style.columnGap = '30px';
+  listOfCards.style.gap = '30px';
 
   [...cards].map((card) => {
     card.classList.remove('hide');
@@ -65,7 +65,7 @@ function makeFilter(cards, filter) {
 
   if (
     filteredElements.length > 2 &&
-    listOfCards.getBoundingClientRect().width >= 1100
+    listOfCards.getBoundingClientRect().width >= 1170
   ) {
     filteredElements[0].style.marginRight = '15px';
     filteredElements[lastIndex].style.marginLeft = '15px';
@@ -82,13 +82,11 @@ function makeFilter(cards, filter) {
   if (listOfCards.getBoundingClientRect().width > 480) {
     filteredElements.forEach((el, i) => {
       if (i % 2 === 0) {
-        console.log(el);
         el.style.margin = 0;
         el.style.marginRight = '15px';
       }
 
       if (i % 2 !== 0) {
-        console.log(el);
         el.style.margin = 0;
         el.style.marginLeft = '15px';
       }

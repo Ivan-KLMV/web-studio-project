@@ -159,7 +159,7 @@
 .hide {
   transform-origin: left;
   animation-name: hideBlocks;
-  animation-duration: 1200ms;
+  animation-duration: 1500ms;
   animation-fill-mode: forwards;
   @media screen and (max-width: 767px) {
     transform-origin: top;
@@ -183,11 +183,11 @@
       flex-basis: calc((100% - 60px) / 3);
     }
   }
-  80% {
-    flex-basis: 0;
-    width: 0;
-    scale: 0;
-  }
+  // 80% {
+  //   flex-basis: 0;
+  //   width: 0;
+  //   scale: 0;
+  // }
   100% {
     opacity: 0;
     flex-basis: 0;

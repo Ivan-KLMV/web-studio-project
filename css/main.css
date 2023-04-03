@@ -709,8 +709,8 @@ a {
           transform-origin: left;
   -webkit-animation-name: hideBlocks;
           animation-name: hideBlocks;
-  -webkit-animation-duration: 1200ms;
-          animation-duration: 1200ms;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -729,11 +729,6 @@ a {
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 60px) / 3);
     }
-  }
-  80% {
-    flex-basis: 0;
-    width: 0;
-    scale: 0;
   }
   100% {
     opacity: 0;
@@ -754,12 +749,6 @@ a {
       -ms-flex-preferred-size: calc((100% - 60px) / 3);
           flex-basis: calc((100% - 60px) / 3);
     }
-  }
-  80% {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    width: 0;
-    scale: 0;
   }
   100% {
     opacity: 0;
