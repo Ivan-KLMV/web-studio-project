@@ -38,6 +38,7 @@
 
 .projects {
   display: flex;
+  row-gap: 30px;
   gap: 30px;
 
   @media screen and (max-width: 767px) {
@@ -46,11 +47,10 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    // grid-gap: 30px;
-    // flex-wrap: wrap;
-    // justify-content: center;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: start;
   }
 
   @media screen and (min-width: 1200px) {
@@ -81,6 +81,7 @@
 }
 
 .projects__item {
+  outline: 1px solid palevioletred;
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -124,7 +125,7 @@
   color: $color-white;
   background: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(101%);
+  transform: translateY(151%);
   transition: transform 250ms $cubic-bezier;
 
   @media screen and (max-width: 767px) {
@@ -153,4 +154,37 @@
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
+}
+
+.hide {
+  transform-origin: left;
+  animation-name: hideBlocks;
+  animation-duration: 1200ms;
+  animation-fill-mode: forwards;
+}
+
+// .show {
+//   animation-name: hideBlocks;
+//   animation-direction: reverse;
+//   animation-duration: 1500ms;
+//   animation-fill-mode: forwards;
+// }
+
+@keyframes hideBlocks {
+  0% {
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+  100% {
+    opacity: 0;
+    flex-basis: 0;
+    width: 0;
+    scale: 0;
+    margin: 0;
+  }
 }

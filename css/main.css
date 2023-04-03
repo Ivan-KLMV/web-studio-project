@@ -565,6 +565,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  row-gap: 30px;
   gap: 30px;
 }
 @media screen and (max-width: 767px) {
@@ -580,8 +581,15 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -613,6 +621,9 @@ a {
   .projects__item:nth-child(odd) {
     justify-self: self-end;
   }
+}
+.projects__item {
+  outline: 1px solid palevioletred;
 }
 @media screen and (min-width: 768px) {
   .projects__item {
@@ -659,8 +670,8 @@ a {
   letter-spacing: 0.03em;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(101%);
-          transform: translateY(101%);
+  -webkit-transform: translateY(151%);
+          transform: translateY(151%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -697,6 +708,55 @@ a {
   color: #757575;
 }
 
+.hide {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation-name: hideBlocks;
+          animation-name: hideBlocks;
+  -webkit-animation-duration: 1200ms;
+          animation-duration: 1200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hideBlocks {
+  0% {
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+  100% {
+    opacity: 0;
+    flex-basis: 0;
+    width: 0;
+    scale: 0;
+    margin: 0;
+  }
+}
+
+@keyframes hideBlocks {
+  0% {
+    @media screen and (min-width: 768px) {
+      -ms-flex-preferred-size: calc((100% - 30px) / 2);
+          flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      -ms-flex-preferred-size: calc((100% - 60px) / 3);
+          flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+  100% {
+    opacity: 0;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    width: 0;
+    scale: 0;
+    margin: 0;
+  }
+}
 .menu-button {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,13 +1,13 @@
-@import "./utils/variables";
-@import "./utils/normalize";
-@import "./components/logo";
-@import "./components/header";
+@import './utils/variables';
+@import './utils/normalize';
+@import './components/logo';
+@import './components/header';
 // @import "./components/hero";
-@import "./components/modal";
-@import "./components/social-icons";
-@import "./components/portfolio";
+@import './components/modal';
+@import './components/social-icons';
+@import './components/portfolio';
 // @import "./components/footer";
-@import "./components/menu";
+@import './components/menu';
 
 .container {
   max-width: 1200px;
