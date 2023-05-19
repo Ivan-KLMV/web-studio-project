@@ -6,7 +6,6 @@ const options = {
   callbacks: {
     onFilteringStart: function () {
       const filterBtnList = document.querySelector('.filter');
-
       filterBtnList.addEventListener('click', cardsFilter);
       function cardsFilter(evt) {
         if (evt.target.nodeName !== 'BUTTON') {
