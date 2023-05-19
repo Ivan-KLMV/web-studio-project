@@ -118,30 +118,20 @@
                   Веб-сайти
                 </button>
               </li>
-              <li>
-                <button type="button" class="filter__btn" data-filter="app">
-                  Додатки
-                </button>
+              <li data-filter="app">
+                <button type="button" class="filter__btn">Додатки</button>
               </li>
-              <li>
-                <button type="button" class="filter__btn" data-filter="design">
-                  Дизайн
-                </button>
+              <li data-filter="design">
+                <button type="button" class="filter__btn">Дизайн</button>
               </li>
-              <li>
-                <button
-                  type="button"
-                  class="filter__btn"
-                  data-filter="marketing"
-                >
-                  Маркетинг
-                </button>
+              <li data-filter="marketing">
+                <button type="button" class="filter__btn">Маркетинг</button>
               </li>
             </ul>
           </div>
           <div>
-            <ul class="projects">
-              <li class="projects__item" data-item="web">
+            <ul class="projects filter-container">
+              <li class="projects__item filtr-item" data-category="web">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -182,7 +172,7 @@
                   </div></a
                 >
               </li>
-              <li class="projects__item" data-item="design">
+              <li class="projects__item filtr-item" data-category="design">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -218,14 +208,12 @@
                     </p>
                   </div>
                   <div class="projects__pocket">
-                    <h3 class="projects__title">
-                      Постер New Orlean vs Golden Star
-                    </h3>
+                    <h3 class="projects__title">New Orlean vs Golden Star</h3>
                     <p class="projects__filter">Дизайн</p>
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="app">
+              <li class="projects__item filtr-item" data-category="app">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -269,7 +257,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="marketing">
+              <li class="projects__item filtr-item" data-category="marketing">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -310,7 +298,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="app">
+              <li class="projects__item filtr-item" data-category="app">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -351,7 +339,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="web">
+              <li class="projects__item filtr-item" data-category="web">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -392,7 +380,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="design">
+              <li class="projects__item filtr-item" data-category="design">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -430,7 +418,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="marketing">
+              <li class="projects__item filtr-item" data-category="marketing">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -468,7 +456,7 @@
                   </div>
                 </a>
               </li>
-              <li class="projects__item" data-item="app">
+              <li class="projects__item filtr-item" data-category="app">
                 <a href="" class="projects__link">
                   <div class="projects__block">
                     <picture>
@@ -626,6 +614,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/menu.js" type="module"></script>
-    <script src="./js/filter.js" type="module"></script>
+    <script src="./js/vanilla.filterizr.min.js" type="text/javascript"></script>
+    <script src="./js/index.js"></script>
+    <!-- <script src="./js/filter.js" type="module"></script> -->
   </body>
 </html>
